@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Github search engine</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>Welcome to the Github User's repoository search engine!</h1>
+
+            <div class="login">
+                <form>
+                    <input type="text" name="user" placeholder="username" autocomplete="off">
+                    <input type="password" name="pwd" placeholder="password">
+                    <input type="text" name="lookingfor" placeholder="User you're searching" autocomplete="off">
+                    <button type="button" name="button" id="dothemagic"> Do the magic</button>
+                </form>
+            </div>
+
+            <div class="container">
+                <script id="user" type="text/x-handlebars-template">
+                    <div class="item">
+                        <header>
+                            {{#owner}}
+                            <img src="{{pic}}" alt=\"{{full_name}}\" />
+                            <h2>Username : {{name}}</h2>
+                            {{/owner}}
+                        </header>
+
+                        <ul>
+                            {{#resultsArray}}
+
+                                <li class="repo" id="{{full_name}}">{{full_name}}
+                                    {{#owner}}
+                                        <img src="{{avatar_url}}" alt=\"{{full_name}}\" />
+                                    {{/owner}}
+                            </li>
+
+
+                                {{/resultsArray}}
+                        </ul>
+                    </div>
+                </script>
+
+
+
+                <script id="commits" type="text/x-handlebars-template">
+                    <div class="commits">
+                        <ul>
+                            {{#reposArray}}
+                                <li class="commit">{{#commit}}{{message}}{{/commit}}</li>
+
+                            {{/reposArray}}
+                        </ul>
+                    </div>
+
+
+
+            </script>
+
+
+
+            </div>
+        </main>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="script.js" charset="utf-8"></script>
+        </body>
+</html>

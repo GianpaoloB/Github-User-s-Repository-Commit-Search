@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600");
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    color: #f2f2f2;
+    background: #25292f;
+}
+main {
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+main::before {
+    background: url(img/background.png) center center / cover repeat-y;
+    content: "";
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    min-height: 100vh;
+}
+h1 {
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.login form {
+    display: flex;
+}
+
+input {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    color: grey;
+    padding: 10px;
+    box-sizing: border-box;
+    text-indent: 15px;
+    margin-bottom: 15px;
+}
+input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    border: 1px solid rgba(81, 203, 238, 1);
+    background: #ccc;
+    color: #000;
+}
+button {
+    width: 80px;
+    height: 50px;
+    font-size: 16px;
+}
+.container {
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 10%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+.item img {
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+    box-shadow: 0px 10px 100px 0px #ccc;
+}
+.item h2 {
+    display: block;
+    float: left;
+    margin: 40px 40px;
+    font-weight: 500;
+}
+.item ul {
+    clear: both;
+    margin-top: 50px;
+}
+.item ul li {
+    line-height: 30px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.item ul li span:hover {
+    text-decoration: underline;
+}
+.item ul li:hover {
+}
+.active {
+    text-decoration: underline;
+}
+.item ul li img {
+    width: 30px;
+    margin-right: 30px;
+}
+.commits {
+    color: #ccc;
+}
+.commits ul {
+    margin: 0;
+    padding: 0;
+}
+.item ul li .commits ul li {
+    margin-left: 90px;
+    list-style-type: square;
+    margin-bottom: 0;
+    text-decoration: none !important;
+}
